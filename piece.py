@@ -29,9 +29,6 @@ class Piece():
     def crown_piece(cls):
         self._crowned = True
 
-    # def crown_piece(self):
-        # self.crowned = True
-
     player = property(get_player, set_player)
     piece_symbol = property(get_piece_symbol, set_piece_symbol)
     crowned = property(get_crowned)
