@@ -1,40 +1,37 @@
-class Piece:
-    def __init__(self, player, piece_symbol, piece_type, crowned):
-        self.player = player
-        self.piece_symbol = piece_symbol
-        self.piece_type = piece_type
-        self.crowned = crowned
+class Piece():
+
+    def __init__(self, player, piece_symbol, crowned=False):
+        self._player = player
+        self._piece_symbol = piece_symbol
+        self._crowned = crowned
+
+    def get_crowned(self):
+        return self._crowned
 
     # returns the player to whom the piece belongs
-    @property
-    def player(self):
+    def get_player(self):
         return self._player
 
     # sets the player to whom the piece belongs
-    @player.setter
-    def player(self, player):
+    def set_player(self, player):
         self._player = player
 
     # returns the symbol of the piece
-    @property
-    def piece_symbol(self):
+    def get_piece_symbol(self):
         return self._piece_symbol
 
     # sets the symbol of the piece
-    @piece_symbol.setter
-    def piece_symbol(self, piece_symbol):
+    def set_piece_symbol(self, piece_symbol):
         self._piece_symbol = piece_symbol
 
-    # returns the type of the piece
-    @property
-    def piece_type(self):
-        return self._piece_type
-
-    # sets the type of the piece
-    @piece_type.setter
-    def piece_type(self, piece_type):
-        self._piece_type = piece_type
-
     # Crowns a piece
-    def crown_piece(self):
-        self.crowned = True
+    @classmethod
+    def crown_piece(cls):
+        self._crowned = True
+
+    # def crown_piece(self):
+        # self.crowned = True
+
+    player = property(get_player, set_player)
+    piece_symbol = property(get_piece_symbol, set_piece_symbol)
+    crowned = property(get_crowned)
