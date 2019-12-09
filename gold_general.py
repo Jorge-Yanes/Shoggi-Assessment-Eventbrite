@@ -3,6 +3,8 @@ from cell import *
 
 
 class Gold_General(Piece):
+    piece_symbol = 'G'
+
     def __init__(self, piece):
 
         self.player = piece.player
