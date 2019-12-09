@@ -8,7 +8,7 @@ class TestClass(unittest.TestCase):
     def test_move_is_possible(self):
         for a in range(8):
             # Piece that we are going to move
-            piece_1 = Piece(player=1, piece_symbol='P',crowned=False)
+            piece_1 = Piece(player=1, piece_symbol='G',crowned=False)
 
             # Piece at the final position
             finish_piece = None
