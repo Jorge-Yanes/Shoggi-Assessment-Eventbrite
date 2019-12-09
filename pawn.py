@@ -2,16 +2,13 @@ from piece import *
 from cell import *
 from gold_general import *
 
-
 class Pawn(Piece):
-
+    piece_symbol = 'P'
     def __init__(self, piece):
 
         self.player = piece.player
-        self.piece_symbol = piece.piece_symbol
         self.crowned = piece.crowned
-
-        Piece.set_piece_symbol("P")
+        self.piece_symbol = piece.piece_symbol
 
     def move_is_possible(self, start, finish, piece, finish_piece):
 
