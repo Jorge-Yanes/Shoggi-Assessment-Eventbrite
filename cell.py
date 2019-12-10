@@ -3,16 +3,15 @@ from piece import *
 
 class Cell:
     
-    def __init__(self, column, row, piece):
+    def __init__(self, column, row):
         self._column = column
         self._row = row
-        self._piece = Piece
 
-    # returns the column where this cell is in the boar
+    # returns the column where this cell is in the board
     def get_column(self):
         return self._column
 
-    # returns the row where this cell is in the boar
+    # returns the row where this cell is in the board
     def get_row(self):
         return self._row
     
