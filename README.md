@@ -1,4 +1,4 @@
-# Shoggi Assessment
+# Shogi Assessment
 
 <p align="center"><img width=70% src="https://raw.githubusercontent.com/Jorge-Yanes/Shoggi-Assessment-Eventbrite/master/media/logo.png"></p>
 
